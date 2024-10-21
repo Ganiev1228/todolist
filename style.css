@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(./henry-be-IicyiaPYGGI-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrapper{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 80vh;
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 120px;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.date{
+    margin: 10px;
+    font-size: large;
+    color: rgb(248, 152, 35);
+}
+.time{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    color: rgb(248, 152, 35);
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: xx-large;
+    color: rgb(248, 152, 35);
+}
+.small{
+    font-size: x-small;
+    color: rgb(248, 152, 35);
+}
+
+.inputter{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 6px;
+    width: 400px;
+    background-color:  rgb(251, 222, 189);
+    transition: 0.4s;
+}
+.inputter:hover{
+    box-shadow: 0px 0px 20px 7px rgb(230, 150, 40);
+    transition: 0.4s;
+}
+.addbtn{
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgb(173, 245, 121) ;
+      
+}
+.addbtn:hover{
+    box-shadow: 0px 0px 4px 5px rgb(230, 250, 216);
+    background-color: rgb(103, 243, 4) ;
+    transition: 0.4s;
+}
+
+.todosclass{
+    display: flex;
+    /* border: 1px solid; */
+    width: 460px;
+    height: 45px;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(251, 222, 189);
+    justify-content: space-between;
+    cursor: pointer;
+}
+.todosclass:hover{
+    border-width: 1px;
+    border-style: groove;
+}
+.todotext{
+    width: 350px;
+    overflow: hidden; /*width uzun bogan texdi ortiqchasini hide qiladi*/
+    text-overflow: ellipsis;
+}
+
+.modal{
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-56.5%, -20%);
+    word-wrap: break-word; /*uzun teksladi tagma tag qiladi */
+    height: auto; 
+    width: 500px;
+    background-color: bisque;
+    z-index: 100
+    
+}
+.added{
+    overflow-y: auto;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+.modal .icons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.modal .todotext{
+    width: 400px;
+}
+.modal .sana,.modal .vaqt{
+    display: none;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    gap: 7px;
+    cursor: pointer;
+}
+.fa-eye:hover{
+    font-size: 17.5px;
+    transition: 0.3s;
+}
+.placeholder::placeholder{
+    color: red;
+}
+.compl{
+    display: none;
+}
+.completed{
+    opacity: 0.5;
+}
+.hidden{
+   display: none;
+}
+
